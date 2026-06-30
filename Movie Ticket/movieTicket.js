@@ -6,6 +6,8 @@ let customers = [
   { name: "Don", age: 45 }
 ];
 
+
+
 function getTicketPrice(age){
 
     if(age >= 60){
@@ -32,10 +34,34 @@ function getCategory(age){
     }
 }
 
+var totalRevenue = 0
+
+var childCount = 0;
+var adultCount = 0;
+var seniorCount = 0;
+
 for (let i = 0; i < customers.length; i++){
     let people = customers[i];
     let ticket = getTicketPrice(people.age);
     let category = getCategory(people.age);
 
+    totalRevenue += ticket;
+
     console.log(`${people.name} (${category}) -> ₱${ticket}`);
+
+    if (category === "Senior"){
+        seniorCount++;
+    }
+    else if (category === "Adult"){
+        adultCount++;
+    }
+    else{
+        childCount++;
+    }
 }
+
+console.log(`\nOur cinemas total revenue: ₱${totalRevenue}\n`);
+console.log(`${childCount} children, ${adultCount} adults, and ${seniorCount} seniors...`);
+
+
+    
