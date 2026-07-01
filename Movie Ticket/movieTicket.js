@@ -6,8 +6,6 @@ let customers = [
   { name: "Don", age: 45 }
 ];
 
-
-
 function getTicketPrice(age){
 
     if(age >= 60){
@@ -61,7 +59,7 @@ for (let i = 0; i < customers.length; i++){
 }
 
 console.log(`\nOur cinemas total revenue: ₱${totalRevenue}\n`);
-console.log(`${childCount} children, ${adultCount} adults, and ${seniorCount} seniors...`);
+console.log(`${childCount} kid(s), ${adultCount} adult(s), and ${seniorCount} senior(s)...`);
 
 
     
